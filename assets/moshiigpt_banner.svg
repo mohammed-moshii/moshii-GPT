@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 250" width="100%" height="250">
+  <defs>
+    <linearGradient id="aiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00ff88" stop-opacity="0.95" />
+      <stop offset="50%" stop-color="#00e5ff" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.9" />
+    </linearGradient>
+    <linearGradient id="darkBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#070b14" />
+      <stop offset="50%" stop-color="#0d1527" />
+      <stop offset="100%" stop-color="#050810" />
+    </linearGradient>
+    <pattern id="grid" width="26" height="26" patternUnits="userSpaceOnUse">
+      <path d="M 26 0 L 0 0 0 26" fill="none" stroke="#00e5ff" stroke-width="0.5" stroke-opacity="0.1" />
+    </pattern>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="250" rx="14" fill="url(#darkBg)" />
+  <rect width="1000" height="250" rx="14" fill="url(#grid)" />
+  <rect width="996" height="246" x="2" y="2" rx="12" fill="none" stroke="url(#aiGrad)" stroke-width="1.5" stroke-opacity="0.6" />
+
+  <!-- Corner Brackets -->
+  <path d="M 25 45 L 25 25 L 45 25" fill="none" stroke="#00ff88" stroke-width="3" stroke-linecap="round" />
+  <path d="M 975 45 L 975 25 L 955 25" fill="none" stroke="#00e5ff" stroke-width="3" stroke-linecap="round" />
+  <path d="M 25 205 L 25 225 L 45 225" fill="none" stroke="#00ff88" stroke-width="3" stroke-linecap="round" />
+  <path d="M 975 205 L 975 225 L 955 225" fill="none" stroke="#7c3aed" stroke-width="3" stroke-linecap="round" />
+
+  <!-- Status Bar -->
+  <circle cx="45" cy="40" r="4.5" fill="#00ff88" filter="url(#glow)">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite" />
+  </circle>
+  <text x="60" y="44" font-family="'Consolas', monospace" font-size="12" font-weight="bold" fill="#00ff88" letter-spacing="2">AI CYBERSHELL // MULTI-MODEL LLM ENGINE</text>
+  <text x="955" y="44" text-anchor="end" font-family="'Consolas', monospace" font-size="12" font-weight="bold" fill="#00e5ff" letter-spacing="2">OPENAI · DEEPSEEK · TOGETHER AI · VIRUSTOTAL</text>
+
+  <!-- Main Title -->
+  <text x="500" y="122" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="52" font-weight="900" fill="url(#aiGrad)" filter="url(#glow)" letter-spacing="6">MoshiiGPT</text>
+
+  <!-- Subtitle -->
+  <text x="500" y="158" text-anchor="middle" font-family="'Consolas', monospace" font-size="15" font-weight="bold" fill="#ffffff" letter-spacing="3">ADVANCED AI CYBERSECURITY TERMINAL &amp; OSINT ASSISTANT</text>
+  <text x="500" y="188" text-anchor="middle" font-family="'Consolas', monospace" font-size="12" font-weight="bold" fill="#38bdf8" letter-spacing="2">TACTICAL RECON  ·  PACKET CAPTURE  ·  THREAT INTELLIGENCE  ·  PENETRATION TESTING</text>
+
+  <!-- Circuit Line -->
+  <line x1="120" y1="216" x2="880" y2="216" stroke="url(#aiGrad)" stroke-width="1.2" stroke-opacity="0.6" />
+  <circle cx="500" cy="216" r="4" fill="#00ff88" filter="url(#glow)" />
+  <rect x="280" y="214.5" width="25" height="3" fill="#00e5ff" />
+  <rect x="695" y="214.5" width="25" height="3" fill="#7c3aed" />
+</svg>
